@@ -23,6 +23,11 @@ void push(stack_t **stack, unsigned int lineNumber)
 	tokenisedLine = tokenise(buffer, " ");
 
 	number = atoi(tokenisedLine[1]);
+	if (number == 0)
+	{
+		dprintf(STDERR_FILENO, "L%i: usage: push integer\n", lineNumber);
+		exit(EXIT_FAILURE);
+	}
 
 	newNode->n = number;
 	newNode->prev = NULL;
@@ -44,9 +49,10 @@ char **tokenise(char *string, char *separator)
 {
 	char *token, **tokenisedLine;
 	int index = 0;
+	const int initialSize = 100;
 
 	token = strtok(string, separator);
-	tokenisedLine = (char **)calloc(100, sizeof(char *));
+	tokenisedLine = (char **)malloc(initialSize * sizeof(char *));
 
 	if (!tokenisedLine)
 	{

@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * check_opcodes - checks a valid opcode in the line
+ * commandChecker - checks a valid opcode in the line
  * Return: opcode (char *)
  */
 
-void (*check_opcodes(void))(stack_t **, unsigned int)
+void (*commandChecker(void))(stack_t **, unsigned int)
 {
 	int index = 0, index2;
 	int valid_opcode;
