@@ -42,5 +42,6 @@ void processFile(char *file);
 void (*commandChecker(void))(stack_t **, unsigned int);
 /*command*/
 void push(stack_t **stack, unsigned int line_number);
+char **tokenise(char *string, char *separator);
 void pall(stack_t **stack, unsigned int line_number);
 #endif
