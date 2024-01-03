@@ -64,20 +64,4 @@ void push(stack_t **stack, unsigned int line_number)
 		*stack = newNode;
 	}
 }
-/**
- * pall - Prints all the values on the stack,
- * @stack: a pointer to the stack.
- * @line_number: the line number.
- */
-void pall(stack_t **stack, unsigned int line_number)
-{
-	(void)line_number;
 
-	stack_t *currentNode = *stack;
-
-	while (currentNode != NULL)
-	{
-		printf("%d\n", currentNode->n);
-		currentNode = currentNode->next;
-	}
-}
