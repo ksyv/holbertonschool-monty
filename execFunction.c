@@ -18,6 +18,7 @@ int execFunction(stack_t **stack, char *opcode, unsigned int line_number)
 		{"add", add},
 		{"pint", pint},
 		{"swap", swap},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
