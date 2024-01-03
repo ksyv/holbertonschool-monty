@@ -34,7 +34,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	{
 		*stack = delete->next;
 		(*stack)->prev = NULL;
-		free(stack);
+		free(delete);
 	}
 	else
 	{
