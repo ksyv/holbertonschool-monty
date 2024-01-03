@@ -14,6 +14,10 @@ int execFunction(stack_t **stack, char *opcode, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pop", pop},
+		{"add", add},
+		{"pint", pint},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
