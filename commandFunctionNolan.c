@@ -52,7 +52,7 @@ void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 
-	if (!*stack || !head->next)
+	if (!*stack || !head->next || !stack)
 	{
 		dprintf(STDERR_FILENO, "L%i: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
