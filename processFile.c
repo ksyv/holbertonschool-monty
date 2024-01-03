@@ -10,17 +10,19 @@ void processFile(char *file)
 	void (*opcode_func)(stack_t **, unsigned int);
 	int line_number = 1;
 	stack_t *new;
+	char *buffer;
 
-	openFile = fopen(file, "r");
+	openFile = fopen(file, "r+");
 	if (!openFile)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&buffer, &readSize, openFile))
+	new = NULL;
+	while (getline(&buffer, &readSize, openFile) != -1)
 	{
 		opcode_func = commandChecker();
-		if (opcode_func == 0)
+		if (opcode_func == NULL)
 		{
 			dprintf(STDERR_FILENO, "L%i: unknown instruction %s", line_number, buffer);
 			exit(EXIT_FAILURE);

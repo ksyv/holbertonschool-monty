@@ -7,6 +7,7 @@
  */
 int main(int argc, char **argv)
 {
+
 	if (argc != 2 || (strcmp(argv[0], "monty") != 0))
 	{
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");

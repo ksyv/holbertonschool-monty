@@ -35,7 +35,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-char *buffer;
+extern char *buffer;
 
 /*prototype*/
 void processFile(char *file);
