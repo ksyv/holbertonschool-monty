@@ -22,7 +22,6 @@ int digit(char *opcode)
 
 /**
  * push - Push an element to the stack.
- *
  * @stack: a pointer to the stack.
  * @line_number: the line number.
  */
@@ -67,10 +66,8 @@ void push(stack_t **stack, unsigned int line_number)
 }
 /**
  * pall - Prints all the values on the stack,
- *        starting from the top of the stack.
- *
- * @stack: a pointer to the top of the stack.
- * @line_number: the line number being executed (not used here).
+ * @stack: a pointer to the stack.
+ * @line_number: the line number.
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
