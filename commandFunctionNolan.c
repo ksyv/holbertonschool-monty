@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pall_function - print line per line the stack
+ * pall - print line per line the stack
  * @stack: stac of data
  * @line_number: file line number
 */
