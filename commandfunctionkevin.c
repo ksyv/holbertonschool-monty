@@ -40,3 +40,13 @@ void swap(stack_t **stack, unsigned int line_number)
 	currentNode->n = currentNode->next->n;
 	currentNode->next->n = number;
 }
+/**
+ * nop - doesn’t do anything
+ * @stack: a pointer to the stack
+ * @line_number: the line number
+ */
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
